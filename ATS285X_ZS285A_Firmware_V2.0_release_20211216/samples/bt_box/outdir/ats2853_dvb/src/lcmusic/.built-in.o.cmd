@@ -1,0 +1,1 @@
+cmd_src/lcmusic/built-in.o :=  /opt/mips-mti-elf/2019.09-01/bin/mips-mti-elf-ld -nostartfiles -nodefaultlibs -nostdlib -static -EL   -r -o src/lcmusic/built-in.o src/lcmusic/lcmusic_main.o src/lcmusic/lcmusic_event.o src/lcmusic/lcmusic_file_selector.o src/lcmusic/lcmusic_breakpoint.o src/lcmusic/lcmusic_view.o 

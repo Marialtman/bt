@@ -1,0 +1,15 @@
+-nostartfiles -nodefaultlibs -nostdlib -static -EL -Wl,-X -Wl,-N -Wl,--gc-sections -Wl,--build-id=none
+-Wl,-Map=zephyr.map
+-L ./include/generated
+-u _OffsetAbsSyms -u _ConfigAbsSyms
+-e __start
+-Wl,--start-group
+-Wl,--whole-archive
+libapplication.a
+libzephyr.a
+/mnt/hgfs/actions/ATS1853/ATS285X_ZS285A_Firmware_V2.0_release_20211216/ext/actions/library/mips/libtws.a /mnt/hgfs/actions/ATS1853/ATS285X_ZS285A_Firmware_V2.0_release_20211216/ext/actions/library/mips/libbt_stack.a /mnt/hgfs/actions/ATS1853/ATS285X_ZS285A_Firmware_V2.0_release_20211216/ext/actions/library/mips/libmedia.a
+-Wl,--no-whole-archive
+kernel/lib.a
+./arch/mips/core/offsets/offsets.o
+-Wl,--end-group
+-L /opt/mips-mti-elf/2019.09-01/bin/../lib/gcc/mips-mti-elf/7.4.0/mipsel-r2-mips16-soft-newlib/lib -L/mnt/hgfs/actions/ATS1853/ATS285X_ZS285A_Firmware_V2.0_release_20211216/ext/actions/library/mips -L/mnt/hgfs/actions/ATS1853/ATS285X_ZS285A_Firmware_V2.0_release_20211216/ext/actions/library/mips/al -L/mnt/hgfs/actions/ATS1853/ATS285X_ZS285A_Firmware_V2.0_release_20211216/ext/actions/library/mips/woodpecker -L/mnt/hgfs/actions/ATS1853/ATS285X_ZS285A_Firmware_V2.0_release_20211216/arch/mips/soc/actions/woodpecker  -l_m1_fmt_p  -l_m1_cvs_d  -l_m1_mp3_d  -l_m1_sbc_c  -l_m1_wav_d  -l_m1_w13_d  -l_m1_cvs_e  -l_m1_plc_p  -l_m1_spe_p  -l_m1_dae_h_p  -l_m1_dae_s_p  -l_m1_fad_p  -l_m1_mix_p  -l_m1_res_h_p  -lbtcon_phoenix  -lsocatp  -lgcc

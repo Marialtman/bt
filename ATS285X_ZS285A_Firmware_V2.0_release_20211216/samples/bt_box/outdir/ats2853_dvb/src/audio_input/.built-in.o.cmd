@@ -1,0 +1,1 @@
+cmd_src/audio_input/built-in.o :=  /opt/mips-mti-elf/2019.09-01/bin/mips-mti-elf-ld -nostartfiles -nodefaultlibs -nostdlib -static -EL   -r -o src/audio_input/built-in.o src/audio_input/audio_input_main.o src/audio_input/audio_input_media.o src/audio_input/audio_input_event.o src/audio_input/audio_input_view.o 

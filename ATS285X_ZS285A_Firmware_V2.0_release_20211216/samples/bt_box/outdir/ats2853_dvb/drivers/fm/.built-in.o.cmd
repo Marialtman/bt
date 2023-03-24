@@ -1,0 +1,1 @@
+cmd_drivers/fm/built-in.o :=  /opt/mips-mti-elf/2019.09-01/bin/mips-mti-elf-ld -nostartfiles -nodefaultlibs -nostdlib -static -EL   -r -o drivers/fm/built-in.o drivers/fm/fm_common.o drivers/fm/fm_transmitter.o drivers/fm/fm_receiver.o drivers/fm/rda5820/fm_rda5820.o 
